@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menubar {
+    box-shadow: 0px 1px 2px #c9c9c9;
+    border-radius: 0;
+  }
+
+
+  .profile-img {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    border-radius: 50%;
+    background-color: #e4e3e3;
+    margin-left: auto;
+    z-index: 5;
+  }
+
+  .menubar .profile-img:hover {
+    background-color: #a4a4a4;
+    cursor: pointer;
+  }
