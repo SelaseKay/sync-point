@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { InputText } from 'primereact/inputtext'
 import { Button } from 'primereact/button'
 import '../resources/css/HomePage.css'
+import { ReactComponent as HeaderLogo } from '../resources/svg/header-logo.svg'
 
 export default function HomePage() {
 
@@ -31,17 +32,17 @@ export default function HomePage() {
                     value={searchValue} onChange={(e) => {
                         setSearchValue(e.target.value)
                     }}
-                    placeholder="Search" type="text" className='hidden md:inline-flex p-menuitem ml-6 mr-6 flex-grow-1' />
+                    placeholder="Search" type="text" className='hidden md:inline-flex p-menuitem mx-auto w-9' />
 
 
-                
+
                 <div className='profile-img align-items-center justify-content-center'>
                     <i className='pi pi-user'></i>
                 </div>
 
             </div>
 
-            
+
             {/* small screens textinput */}
             <div className='flex'>
                 <InputText
@@ -52,9 +53,22 @@ export default function HomePage() {
             </div>
 
             {/* fabs */}
-            <div className='flex flex-column align-items-center justify-content-center absolute right-0 bottom-0 mb-3 mr-3'>
+            <div className='flex flex-column align-items-center justify-content-center fixed right-0 bottom-0 mb-3 mr-3'>
                 <Button icon="pi pi-upload upload-icon-color" className="p-button-rounded border-none mb-3 shadow-3 upload-doc-button" aria-label="upload-doc" />
                 <Button icon="pi pi-plus plus-icon-color" className="p-button-rounded border-none bg-white shadow-3 create-doc-button" aria-label="create-doc" />
+            </div>
+
+            <div className='flex flex-column mx-2 md:mx-4 align-items-center'>
+                <div className='flex flex-column md:flex-row p-3 bg-blue-500 mt-2 mx-auto md:w-10 align-self-center border-round-sm justify-content-between mb-4'>
+                    <div className='flex flex-column mb-7 w-0 md:w-6 md:mb-0'>
+                        <p className='text-white text-4xl font-bold'>Your Documents</p>
+                        <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Vitae sapien pellentesque habitant morbi tristique senectus et netus.
+                            Vitae proin sagittis nisl rhoncus mattis. Maecenas pharetra convallis posuere morbi leo urna molestie.</p>
+                    </div>
+                    <HeaderLogo />
+                </div>
             </div>
         </div>
 
